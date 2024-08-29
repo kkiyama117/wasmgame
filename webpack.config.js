@@ -14,11 +14,14 @@ module.exports = {
     filename: "[name].js"
   },
   devServer: {
-    contentBase: dist,
+    static: {
+      directory: dist,
+      staticOptions: {},
+    },
   },
-  experiments: {
-    asyncWebAssembly: true,
-  },
+  // experiments: {
+  //   asyncWebAssembly: true,
+  // },
   plugins: [
     new CopyPlugin({
         patterns: [
