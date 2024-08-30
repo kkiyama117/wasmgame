@@ -5,3 +5,4 @@ node_modules
 /wasm-pack.log
 /.vscode
 /.idea
+/${XDG_CACHE_HOME}/
