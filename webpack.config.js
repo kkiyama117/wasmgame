@@ -20,9 +20,9 @@ module.exports = {
       staticOptions: {},
     },
   },
-  // experiments: {
-  //   asyncWebAssembly: true,
-  // },
+  experiments: {
+    asyncWebAssembly: true,
+  },
   plugins: [
     new CopyPlugin({
         patterns: [
@@ -35,7 +35,7 @@ module.exports = {
         ]
     }),
     new WasmPackPlugin({
-      crateDirectory: __dirname,
+      crateDirectory: path.resolve(__dirname),
     }),
   ]
 };
